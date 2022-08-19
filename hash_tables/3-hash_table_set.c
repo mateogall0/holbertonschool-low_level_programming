@@ -27,7 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!new->value || !new->key)
 		return (0);
 	new->next = 0;
-	if (p)
+	if (p && strcmp(p->key, key) != 0)
 		new->next = p;
 	ht->array[index] = new;
 	return (1);
