@@ -9,13 +9,14 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
 	hash_node_t *p;
-	char n;
+	int n = 0;
 
+	if (!ht)
+		return;
 	putchar('{');
 	for (i = 0; ht && i < ht->size; i++)
 	{
 		p = ht->array[i];
-		n = 0;
 		while (p)
 		{
 			if (n)
