@@ -10,7 +10,6 @@
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 	unsigned long int k;
-	int i;
 
 	if (!key || !size)
 		return (0);
