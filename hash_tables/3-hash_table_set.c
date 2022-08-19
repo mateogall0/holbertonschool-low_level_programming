@@ -13,9 +13,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new = 0, *p = 0;
 	int index = 0;
 	
-	if (!ht || !ht->array || !key || value)
+	if (!ht || !ht->array || !key || !value)
 		return (0);
-	new = malloc(sizeof(hash_node_t));
 	index = key_index((const unsigned char *)key, ht->size);
 	p = ht->array[index];
 	while (p)
