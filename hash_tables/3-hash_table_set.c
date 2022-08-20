@@ -23,9 +23,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!new)
 		return (0);
 	new->key = strdup(key);
-	new->value = strdup(value);
-	if (!new->value || !new->key)
+	if (!new->key)
+	{
+		free(new);
 		return (0);
+	}
+	new->value = strdup(value);
+	if (!new->key)
+	{
+		free(new->value);
+		free(new);
+		return (0);
+	}
 	new->next = 0;
 	if (p && strcmp(p->key, key) != 0)
 		new->next = p;
