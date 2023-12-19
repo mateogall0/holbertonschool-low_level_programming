@@ -40,6 +40,6 @@ int main(void)
 <p>These are the four steps the compiler takes before giving an executable of your code as outuput:</p>
 
 - Preprocessing: In this phase, the compiler resolves directives such as <code>#include</code> or <code>#define</code> and removes all the comments there are in the code, resulting in an intermidiate code that is easier to read for the compiler.
-- Compilation: Now the code is translated into assembly code or object code, that is specific to the target machine architecture. This means that compiled code that I write on a computer running Windows won't work on a computer that uses MacOS.
+- Compilation: Now the code is translated into assembly code or object code, that is specific to the target machine architecture. This means that compiled code that I write on a computer running Windows won't work on a computer that uses macOS.
 - Assembly: The code generated is now processed by an assembler, which converts the assembly or object code into machine code, also called "binary code". This code can now be read by the CPU.
 - Linking: The final stage consists of multiple source files, the linker combines the magine code generated for each file resolving references between them. The linker produces the final executable file that can be run on the target system.
